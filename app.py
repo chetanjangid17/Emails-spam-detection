@@ -54,5 +54,5 @@ if st.button('Predict'):
         st.success("Not Spam")
 
 if st.button('Clear'):
-    st.text_area("Enter the message", value='')
+   return self._text_area()
 
