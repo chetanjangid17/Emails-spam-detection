@@ -3,8 +3,8 @@ import re
 import pickle
 import string
 import nltk
-import altair as alt
 import numpy as np
+import altair as alt
 import pandas as pd
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
@@ -118,9 +118,8 @@ if st.button('Predict'):
             st.subheader("Contains IP Address:")
             st.write(contains_ip)
 
-            # Visualization: Bar chart of prediction probabilities with custom colors
-            chart_data = pd.DataFrame({'Probability': prediction_proba, 'Category': ['Not Spam', 'Spam']})
-            st.bar_chart(chart_data.set_index('Category'), use_container_width=True, color=['green', 'red'])
+            # Visualization: Bar chart of prediction probabilities
+            st.bar_chart({'Not Spam': prediction_proba[0], 'Spam': prediction_proba[1]})
 
             # Visualization: Confusion Matrix (replace with actual confusion matrix)
             confusion_matrix = np.array([[50, 10], [5, 80]])
