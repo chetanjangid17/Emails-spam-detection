@@ -3,7 +3,6 @@ import re
 import pickle
 import string
 import nltk
-import matplotlib.pyplot as plt
 import numpy as np
 import altair as alt
 import pandas as pd
@@ -120,12 +119,7 @@ if st.button('Predict'):
             st.write(contains_ip)
 
             # Visualization: Bar chart of prediction probabilities
-            fig, ax = plt.subplots()
-            labels = ["Not Spam", "Spam"]
-            ax.bar(labels, prediction_proba, color=['green', 'red'])
-            ax.set_ylabel('Probability')
-            ax.set_title('Prediction Probabilities')
-            st.pyplot(fig)
+            st.bar_chart({'Not Spam': prediction_proba[0], 'Spam': prediction_proba[1]})
 
             # Visualization: Confusion Matrix (replace with actual confusion matrix)
             confusion_matrix = np.array([[50, 10], [5, 80]])
@@ -151,8 +145,6 @@ if st.button('Predict'):
 
             # Display the Altair chart in Streamlit
             st.altair_chart(confusion_chart)
-
-# You can add more Streamlit components and sections as needed
 
 # Footer
 st.markdown("---")
