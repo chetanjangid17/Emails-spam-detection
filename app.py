@@ -3,7 +3,7 @@ import re
 import pickle
 import string
 import nltk
-
+import matplotlib.pyplot as plt
 import numpy as np
 import altair as alt
 import pandas as pd
