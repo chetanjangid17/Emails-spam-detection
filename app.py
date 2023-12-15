@@ -147,5 +147,5 @@ if st.button('Predict'):
             st.altair_chart(confusion_chart)
 
 # Footer
-st.markdown("---")
-st.markdown("Developed by Abhishek and Chetan")
+                                                        st.markdown("---")
+                                        st.markdown("Developed by Abhishek and Chetan")
