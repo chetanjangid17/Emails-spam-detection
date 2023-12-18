@@ -70,7 +70,7 @@ st.set_page_config(
 )
 
 # Set Streamlit app title
-st.title("User Page - Email Spam Classifier")
+st.title(" Email Spam Classifier")
 
 # Session state for login/logout
 if 'is_logged_in' not in st.session_state:
