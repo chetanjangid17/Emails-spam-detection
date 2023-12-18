@@ -85,7 +85,7 @@ if not st.session_state.is_logged_in:
         if username == "user" and password == "password":
             st.session_state.is_logged_in = True
             st.success("Login successful!")
-            st.sidebar.success(f"Welcome {username}")
+          
         else:
             st.error("Invalid credentials. Please try again.")
 else:
