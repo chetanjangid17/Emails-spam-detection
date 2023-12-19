@@ -82,7 +82,7 @@ if not st.session_state.is_logged_in:
     password = st.text_input("Password", type="password")
 
     if st.button("Login"):
-        if username == "user" and password == "password":
+        if username == "Abhichetan" and password == "Abhishek@12":
             st.session_state.is_logged_in = True
             st.success("Login successful!")
           
