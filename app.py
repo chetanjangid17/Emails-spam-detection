@@ -233,4 +233,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("Developed by Abhishek Ray and Chetan Jangid")
+st.markdown("Developed by Abhishek Rai and Chetan Jangid")
