@@ -70,7 +70,7 @@ st.set_page_config(
 )
 
 # Set Streamlit app title
-st.title(" Email Spam Classifier")
+st.title("Email Spam Classifier")
 
 # Session state for login/logout
 if 'is_logged_in' not in st.session_state:
@@ -81,13 +81,16 @@ if not st.session_state.is_logged_in:
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
 
+    # Password validation requirements
+    password_regex = re.compile(r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$')
+
     if st.button("Login"):
-        if username == "Abhichetan" and password == "Abhishek@12":
+        if username == "Chetan" and password_regex.match(password):
             st.session_state.is_logged_in = True
             st.success("Login successful!")
-          
+
         else:
-            st.error("Invalid credentials. Please try again.")
+            st.warning("Password must be at least 8 characters long.")
 else:
     # Logout option
     if st.button("Logout"):
@@ -233,4 +236,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("Developed by Abhishek Rai and Chetan Jangid")
+st.markdown("Developed by Abhishek Ray and Chetan Jangid")
