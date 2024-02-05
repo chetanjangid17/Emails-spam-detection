@@ -85,7 +85,7 @@ if not st.session_state.is_logged_in:
     password_regex = re.compile(r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$')
 
     if st.button("Login"):
-        if username == "Chetan" and password_regex.match(password):
+        if username == "Admin" and password_regex.match(password):
             st.session_state.is_logged_in = True
             st.success("Login successful!")
 
