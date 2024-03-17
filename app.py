@@ -210,5 +210,5 @@ elif selected_page == "Ham Page":
         st.text_area("Ham Emails", ham_emails)
 # Footer
 st.markdown("---")
-st.markdown("Developed by  Chetan Jangid")
+st.markdown("Developed by  Chetan Jangid and Abhishek Rai")
 
